@@ -8,23 +8,25 @@
     <!-- Tailwind CSS CDN for instant in-browser styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom scrollbar for a sleeker look if the events list grows */
+        /* Custom scrollbar updated for the lighter theme */
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
         }
 
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(30, 41, 59, 0.5);
+            background: rgba(241, 245, 249, 1);
+            /* slate-100 */
             border-radius: 4px;
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(45, 212, 191, 0.5);
+            background: rgba(13, 148, 136, 0.3);
+            /* teal-600 with opacity */
             border-radius: 4px;
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(45, 212, 191, 1);
+            background: rgba(13, 148, 136, 0.8);
         }
     </style>
 </head>
@@ -94,11 +96,11 @@
                 </button>
             </section>
 
-            <!-- 2. Schedule/Upcoming Events Section -->
+            <!-- 2. Schedule/Upcoming Events Section (Lighter Color Scheme) -->
             <section
-                class="bg-slate-900 rounded-2xl shadow-sm text-white p-8 hover:shadow-lg transition duration-300 h-full flex flex-col">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 shrink-0">
-                    <svg class="w-7 h-7 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="bg-white rounded-2xl shadow-sm border border-slate-100 text-slate-800 p-8 hover:shadow-lg transition duration-300 h-full flex flex-col">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 shrink-0 text-slate-900">
+                    <svg class="w-7 h-7 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
                         </path>
@@ -112,16 +114,16 @@
                     <!-- Sundays -->
                     <div>
                         <h3
-                            class="font-bold text-teal-400 text-lg border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider text-sm">
+                            class="font-bold text-teal-700 text-lg border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider text-sm">
                             Sundays</h3>
                         <ul class="space-y-3">
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">9:15</span>
-                                <span class="text-slate-100">Life Groups, Youth, and Children's activities</span>
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">9:15</span>
+                                <span class="text-slate-700">Life Groups, Youth, and Children's activities</span>
                             </li>
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">10:30</span>
-                                <span class="text-slate-100">Worship Service in the Sanctuary</span>
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">10:30</span>
+                                <span class="text-slate-700">Worship Service in the Sanctuary</span>
                             </li>
                         </ul>
                     </div>
@@ -129,20 +131,20 @@
                     <!-- Wednesdays -->
                     <div>
                         <h3
-                            class="font-bold text-teal-400 text-lg border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider text-sm">
+                            class="font-bold text-teal-700 text-lg border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider text-sm">
                             Wednesdays</h3>
                         <ul class="space-y-3">
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">5:30</span>
-                                <span class="text-slate-100">
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">5:30</span>
+                                <span class="text-slate-700">
                                     Family Meal
                                     <!-- Pop-up trigger -->
                                     <span
-                                        class="relative group inline-block ml-1 text-teal-300 underline decoration-dotted cursor-pointer">
+                                        class="relative group inline-block ml-1 text-teal-600 underline decoration-dotted cursor-pointer">
                                         (Info)
                                         <!-- Tooltip Content -->
                                         <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-teal-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-teal-600">
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-slate-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-slate-700">
                                             Join us for a wonderful time of food and fellowship before evening
                                             activities begin. Menu changes weekly!
                                         </div>
@@ -150,47 +152,68 @@
                                 </span>
                             </li>
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">6:30</span>
-                                <span class="text-slate-100">
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">6:30</span>
+                                <span class="text-slate-700">
                                     <!-- RA Pop-up -->
                                     <span
-                                        class="relative group inline-block text-teal-300 underline decoration-dotted cursor-pointer font-medium">
+                                        class="relative group inline-block text-teal-600 underline decoration-dotted cursor-pointer font-medium">
                                         RAs
                                         <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-teal-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-teal-600">
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-slate-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-slate-700">
                                             Royal Ambassadors: A missions discipleship group for boys in grades 1-6
-                                            learning to serve Christ.
+                                            learning to serve Christ. <a href="nextgen.html"
+                                                class="text-teal-400 underline">Learn more</a>.
                                         </div>
                                     </span>
                                     /
                                     <!-- GA Pop-up -->
                                     <span
-                                        class="relative group inline-block text-teal-300 underline decoration-dotted cursor-pointer font-medium">
+                                        class="relative group inline-block text-teal-600 underline decoration-dotted cursor-pointer font-medium">
                                         GAs
                                         <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-teal-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-teal-600">
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-slate-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-slate-700">
                                             Girls in Action: A dynamic missions discipleship ministry for girls in
-                                            grades 1-6.
+                                            grades 1-6. <a href="nextgen.html" class="text-teal-400 underline">Learn
+                                                more</a>
                                         </div>
                                     </span>
                                     in main building
                                 </span>
                             </li>
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">6:30</span>
-                                <span class="text-slate-100">Youth in the Loft</span>
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">6:30</span>
+                                <span class="text-slate-700">
+                                    <!-- Youth Link with Pop-up -->
+                                    <a href="nextgen.html"
+                                        class="relative group inline-block text-teal-600 underline decoration-dotted hover:text-teal-500 transition-colors cursor-pointer font-medium">
+                                        Youth
+
+                                        <!-- Tooltip Wrapper -->
+                                        <div
+                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 pb-2 hidden group-hover:block w-48 z-[9999] cursor-default">
+
+                                            <!-- Tooltip Content -->
+                                            <div
+                                                class="bg-slate-800 text-white text-xs rounded p-3 shadow-xl normal-case border border-slate-700">
+                                                Our youth ministry provides a welcoming space for teenagers to explore
+                                                their faith, ask tough questions, and build lasting friendships.
+                                            </div>
+
+                                        </div>
+                                    </a> in the Loft
+                                </span>
                             </li>
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">6:30</span>
-                                <span class="text-slate-100">Pastor Adam's Bible Study, Large fellowship hall</span>
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">6:30</span>
+                                <span class="text-slate-700">Pastor Adam's Bible Study, Large fellowship hall</span>
                             </li>
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">7:30</span>
-                                <span class="text-slate-100">Choir practice in the Sanctuary</span>
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">7:30</span>
+                                <span class="text-slate-700">Choir practice in the Sanctuary</span>
                             </li>
                             <li class="flex gap-3">
-                                <span class="font-semibold text-slate-300 w-12 shrink-0">8:30</span>
-                                <span class="text-slate-100">Praise team practice in the Sanctuary</span>
+                                <span class="font-semibold text-slate-500 w-12 shrink-0">8:30</span>
+                                <span class="text-slate-700">Praise team practice in the Sanctuary</span>
                             </li>
                         </ul>
                     </div>
@@ -198,16 +221,16 @@
                     <!-- Special Events -->
                     <div>
                         <h3
-                            class="font-bold text-teal-400 text-lg border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider text-sm">
+                            class="font-bold text-teal-700 text-lg border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider text-sm">
                             Special Events</h3>
                         <ul class="space-y-4">
                             <li>
-                                <div class="font-medium text-slate-100">Community Outreach</div>
-                                <div class="text-sm text-slate-400 mt-0.5">Saturday, Aug 8th at 10:00 AM</div>
+                                <div class="font-medium text-slate-700">Community Outreach</div>
+                                <div class="text-sm text-slate-500 mt-0.5">Saturday, Aug 8th at 10:00 AM</div>
                             </li>
                             <li>
-                                <div class="font-medium text-slate-100">Quarterly Business Meeting</div>
-                                <div class="text-sm text-slate-400 mt-0.5">Sunday, Aug 23rd at 6:00 PM</div>
+                                <div class="font-medium text-slate-700">Quarterly Business Meeting</div>
+                                <div class="text-sm text-slate-500 mt-0.5">Sunday, Aug 23rd at 6:00 PM</div>
                             </li>
                         </ul>
                     </div>
@@ -216,21 +239,37 @@
             </section>
         </div>
 
-        <!-- 3. About Section (Spanning Both Columns) -->
+        <!-- 3. About Section (Two-Column Layout) -->
         <section
             class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 hover:shadow-lg transition duration-300">
-            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">About Our Community</h2>
-            <div class="max-w-4xl mx-auto text-slate-600 space-y-5 text-center md:text-left text-lg leading-relaxed">
-                <p>
-                    We are a vibrant and welcoming community dedicated to loving God and serving our neighbors. Our
-                    mission is to provide a safe and nurturing environment where individuals and families can grow
-                    spiritually while building lasting relationships.
-                </p>
-                <p>
-                    Founded on the principles of grace and truth, we believe in the power of community to transform
-                    lives. Join us as we journey together in faith, hope, and love. Everyone has a story, and we would
-                    love to be a part of yours.
-                </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                <!-- Left Column: Graphic -->
+                <div class="flex justify-center md:justify-end">
+                    <img src="art.png" alt="Our Mission" class="w-full max-w-sm h-auto object-contain">
+                </div>
+
+                <!-- Right Column: Text -->
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center md:text-left">About Our Community</h2>
+                    <div class="text-slate-600 space-y-5 text-center md:text-left text-lg leading-relaxed">
+                        <p>
+                            We are a vibrant and welcoming community dedicated to loving God and serving our neighbors.
+                            Our
+                            mission is to provide a safe and nurturing environment where individuals and families can
+                            grow
+                            spiritually while building lasting relationships.
+                        </p>
+                        <p>
+                            Founded on the principles of grace and truth, we believe in the power of community to
+                            transform
+                            lives. Join us as we journey together in faith, hope, and love. Everyone has a story, and we
+                            would
+                            love to be a part of yours.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
