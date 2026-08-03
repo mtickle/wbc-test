@@ -1,162 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Next Generation Ministries - Grace & Truth Fellowship</title>
     <!-- Tailwind CSS CDN for instant in-browser styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
-
+  <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
     <!-- Header -->
     <header class="bg-slate-900 text-white shadow-md">
-        <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-            <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Grace & Truth Fellowship</h1>
-            <nav class="hidden md:flex gap-6 font-medium text-sm md:text-base">
-                <a href="#" class="hover:text-teal-400 transition duration-200">Home</a>
-                <a href="#" class="hover:text-teal-400 transition duration-200">Sermons</a>
-                <a href="#" class="text-teal-400 transition duration-200">Ministries</a>
-                <a href="#" class="hover:text-teal-400 transition duration-200">Contact</a>
-            </nav>
-            <!-- Mobile Menu Placeholder -->
-            <div class="md:hidden">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </div>
+      <div
+        class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center"
+      >
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight">
+          Grace & Truth Fellowship
+        </h1>
+        <nav class="hidden md:flex gap-6 font-medium text-sm md:text-base">
+          <a
+            href="index.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Home</a
+          >
+          <a
+            href="sermons.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Sermons</a
+          >
+          <a
+            href="lifegroups.html"
+            class="text-teal-400 transition duration-200"
+            >Life Groups</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Contact</a
+          >
+        </nav>
+        <!-- Mobile Menu Placeholder -->
+        <div class="md:hidden">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
         </div>
+      </div>
     </header>
 
     <!-- Page Hero Section -->
     <div class="bg-teal-700 text-white py-12 md:py-16">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Next Generation Ministries</h1>
-            <p class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto leading-relaxed">
-                Equipping our youth and children to know Jesus, grow in faith, and serve the community.
-            </p>
-        </div>
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+          Next Generation Ministries
+        </h1>
+        <p
+          class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto leading-relaxed"
+        >
+          Equipping our youth and children to know Jesus, grow in faith, and
+          serve the community.
+        </p>
+      </div>
     </div>
 
     <!-- Main Content -->
     <main class="flex-grow max-w-6xl mx-auto px-6 py-12 w-full space-y-12">
+      <!-- Youth Section -->
+      <section
+        class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center hover:shadow-lg transition duration-300"
+      >
+        <div class="md:w-1/2 space-y-5">
+          <div
+            class="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase"
+          >
+            Grades 7 to 12
+          </div>
+          <h2 class="text-3xl font-bold text-slate-900">Youth Ministry</h2>
+          <p class="text-slate-600 leading-relaxed">
+            Our youth ministry provides a welcoming space for teenagers to
+            explore their faith, ask tough questions, and build lasting
+            friendships. We meet weekly for worship, teaching, and small group
+            discussions designed specifically for middle and high school
+            students.
+          </p>
 
-        <!-- Youth Section -->
-        <section
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center hover:shadow-lg transition duration-300">
-            <div class="md:w-1/2 space-y-5">
-                <div
-                    class="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
-                    Grades 7 to 12
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900">Youth Ministry</h2>
-                <p class="text-slate-600 leading-relaxed">
-                    Our youth ministry provides a welcoming space for teenagers to explore their faith, ask tough
-                    questions, and build lasting friendships. We meet weekly for worship, teaching, and small group
-                    discussions designed specifically for middle and high school students.
-                </p>
-
-                <div class="pt-2">
-                    <h3 class="font-semibold text-slate-800 mb-3">Weekly Schedule:</h3>
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-teal-600 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span><strong>Sundays at 9:15 AM:</strong> Life Groups</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-teal-600 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span><strong>Wednesdays at 6:30 PM:</strong> Worship and Study in the Loft</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Image Placeholder -->
-            <div
-                class="md:w-1/2 w-full bg-slate-100 rounded-xl h-72 flex flex-col items-center justify-center text-slate-400 border-2 border-dashed border-slate-200">
-                <svg class="w-12 h-12 mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                    </path>
+          <div class="pt-2">
+            <h3 class="font-semibold text-slate-800 mb-3">Weekly Schedule:</h3>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex items-center gap-3">
+                <svg
+                  class="w-5 h-5 text-teal-600 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
                 </svg>
-                <span class="font-medium">Youth Group Image Placeholder</span>
-            </div>
-        </section>
-
-        <!-- RA / GA Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-
-            <!-- RAs -->
-            <section
-                class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col">
-                <div
-                    class="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase w-max mb-5">
-                    Boys Grades 1 to 6
-                </div>
-                <h2 class="text-2xl font-bold text-slate-900 mb-3">Royal Ambassadors (RAs)</h2>
-                <p class="text-slate-600 leading-relaxed flex-grow">
-                    Royal Ambassadors is a dynamic missions discipleship group. Boys learn about the world, discover how
-                    to serve Christ, and participate in hands-on activities that build character and leadership skills.
-                </p>
-                <div class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-3 text-slate-700 text-sm">
-                    <svg class="w-5 h-5 text-teal-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                    <span><strong>Wednesdays at 6:30 PM</strong> in the Main Building</span>
-                </div>
-            </section>
-
-            <!-- GAs -->
-            <section
-                class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col">
-                <div
-                    class="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase w-max mb-5">
-                    Girls Grades 1 to 6
-                </div>
-                <h2 class="text-2xl font-bold text-slate-900 mb-3">Girls in Action (GAs)</h2>
-                <p class="text-slate-600 leading-relaxed flex-grow">
-                    Girls in Action focuses on teaching girls how to live a missional lifestyle. Through engaging
-                    stories, collaborative projects, and fellowship, girls grow in their faith and learn how they can
-                    make a positive impact in their community.
-                </p>
-                <div class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-3 text-slate-700 text-sm">
-                    <svg class="w-5 h-5 text-teal-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                    <span><strong>Wednesdays at 6:30 PM</strong> in the Main Building</span>
-                </div>
-            </section>
-
+                <span><strong>Sundays at 9:15 AM:</strong> Life Groups</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg
+                  class="w-5 h-5 text-teal-600 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span
+                  ><strong>Wednesdays at 6:30 PM:</strong> Worship and Study in
+                  the Loft</span
+                >
+              </li>
+            </ul>
+          </div>
         </div>
 
+        <!-- Image Placeholder -->
+        <div
+          class="md:w-1/2 w-full bg-slate-100 rounded-xl h-72 flex flex-col items-center justify-center text-slate-400 border-2 border-dashed border-slate-200"
+        >
+          <svg
+            class="w-12 h-12 mb-3 text-slate-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
+          </svg>
+          <span class="font-medium">Youth Group Image Placeholder</span>
+        </div>
+      </section>
+
+      <!-- RA / GA Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <!-- RAs -->
+        <section
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col"
+        >
+          <div
+            class="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase w-max mb-5"
+          >
+            Boys Grades 1 to 6
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">
+            Royal Ambassadors (RAs)
+          </h2>
+          <p class="text-slate-600 leading-relaxed flex-grow">
+            Royal Ambassadors is a dynamic missions discipleship group. Boys
+            learn about the world, discover how to serve Christ, and participate
+            in hands-on activities that build character and leadership skills.
+          </p>
+          <div
+            class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-3 text-slate-700 text-sm"
+          >
+            <svg
+              class="w-5 h-5 text-teal-600 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span
+              ><strong>Wednesdays at 6:30 PM</strong> in the Main Building</span
+            >
+          </div>
+        </section>
+
+        <!-- GAs -->
+        <section
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col"
+        >
+          <div
+            class="inline-block bg-teal-50 text-teal-700 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase w-max mb-5"
+          >
+            Girls Grades 1 to 6
+          </div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-3">
+            Girls in Action (GAs)
+          </h2>
+          <p class="text-slate-600 leading-relaxed flex-grow">
+            Girls in Action focuses on teaching girls how to live a missional
+            lifestyle. Through engaging stories, collaborative projects, and
+            fellowship, girls grow in their faith and learn how they can make a
+            positive impact in their community.
+          </p>
+          <div
+            class="mt-8 pt-4 border-t border-slate-100 flex items-center gap-3 text-slate-700 text-sm"
+          >
+            <svg
+              class="w-5 h-5 text-teal-600 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span
+              ><strong>Wednesdays at 6:30 PM</strong> in the Main Building</span
+            >
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p>&copy; 2026 Grace & Truth Fellowship. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-            </div>
+    <footer
+      class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm"
+      >
+        <p>&copy; 2026 Grace & Truth Fellowship. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition duration-200"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition duration-200"
+            >Terms of Service</a
+          >
         </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

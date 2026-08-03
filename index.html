@@ -1,291 +1,646 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Church Website Prototype</title>
     <!-- Tailwind CSS CDN for instant in-browser styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom scrollbar updated for the lighter theme */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
+      /* Custom scrollbar updated for the lighter theme */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
 
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(241, 245, 249, 1);
-            /* slate-100 */
-            border-radius: 4px;
-        }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(241, 245, 249, 1);
+        /* slate-100 */
+        border-radius: 4px;
+      }
 
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(13, 148, 136, 0.3);
-            /* teal-600 with opacity */
-            border-radius: 4px;
-        }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(13, 148, 136, 0.3);
+        /* teal-600 with opacity */
+        border-radius: 4px;
+      }
 
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(13, 148, 136, 0.8);
-        }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(13, 148, 136, 0.8);
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
-
+  <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
     <!-- Header -->
     <header class="bg-slate-900 text-white shadow-md">
-        <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-            <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Grace & Truth Fellowship</h1>
-            <nav class="hidden md:flex gap-6 font-medium text-sm md:text-base">
-                <a href="#" class="hover:text-teal-400 transition duration-200">Home</a>
-                <a href="#" class="hover:text-teal-400 transition duration-200">Sermons</a>
-                <a href="#" class="hover:text-teal-400 transition duration-200">Contact</a>
-            </nav>
-            <!-- Mobile Menu Placeholder -->
-            <div class="md:hidden">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </div>
+      <div
+        class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center"
+      >
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight">
+          Grace & Truth Fellowship
+        </h1>
+        <nav class="hidden md:flex gap-6 font-medium text-sm md:text-base">
+          <a
+            href="index.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Home</a
+          >
+          <a
+            href="sermons.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Sermons</a
+          >
+          <a
+            href="lifegroups.html"
+            class="text-teal-400 transition duration-200"
+            >Life Groups</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Contact</a
+          >
+        </nav>
+        <!-- Mobile Menu Placeholder -->
+        <div class="md:hidden">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
         </div>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="flex-grow max-w-6xl mx-auto px-6 py-12 w-full">
-
-        <!-- Top Two Columns: New Here & Schedule -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-stretch">
-
-            <!-- 1. New Here Section -->
-            <section
-                class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col justify-between h-full">
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                        <svg class="w-7 h-7 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                            </path>
-                        </svg>
-                        New Here?
-                    </h2>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        Welcome! We are so glad you found us. Whether you are exploring faith for the first time or
-                        looking for a new church home, there is a place for you here. Come exactly as you are.
-                    </p>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        We have dedicated, secure environments for infants through 5th grade during all Sunday services.
-                        Our background-checked volunteers are ready to help you at the Kids Check-In desk as soon as you
-                        arrive.
-                    </p>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        We are easily accessible from Raleigh, Wendell, Clayton, or Zebulon. When you pull into the lot,
-                        look for the reserved First-Time Guest parking right near the
-                        main entrance.
-                    </p>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        Let our welcome team know that you are a first-time guest. We have a free gift for you and a
-                        team ready
-                        to answer any questions, show you around, or just say hello!
-                    </p>
-                </div>
-                <button
-                    class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 w-full md:w-auto self-start mt-auto">
-                    Plan Your Visit
-                </button>
-            </section>
-
-            <!-- 2. Schedule/Upcoming Events Section (Lighter Color Scheme) -->
-            <section
-                class="bg-white rounded-2xl shadow-sm border border-slate-100 text-slate-800 p-8 hover:shadow-lg transition duration-300 h-full flex flex-col">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 shrink-0 text-slate-900">
-                    <svg class="w-7 h-7 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                    Upcoming Events
-                </h2>
-
-                <!-- Scrollable Events Container -->
-                <div class="space-y-6 overflow-y-auto custom-scrollbar pr-3 flex-grow">
-
-                    <!-- Sundays -->
-                    <div>
-                        <h3
-                            class="font-bold text-teal-700 text-lg border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider text-sm">
-                            Sundays</h3>
-                        <ul class="space-y-3">
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">9:15</span>
-                                <span class="text-slate-700">Life Groups, Youth, and Children's activities</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">10:30</span>
-                                <span class="text-slate-700">Worship Service in the Sanctuary</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Wednesdays -->
-                    <div>
-                        <h3
-                            class="font-bold text-teal-700 text-lg border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider text-sm">
-                            Wednesdays</h3>
-                        <ul class="space-y-3">
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">5:30</span>
-                                <span class="text-slate-700">
-                                    Family Meal
-                                    <!-- Pop-up trigger -->
-                                    <span
-                                        class="relative group inline-block ml-1 text-teal-600 underline decoration-dotted cursor-pointer">
-                                        (Info)
-                                        <!-- Tooltip Content -->
-                                        <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-slate-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-slate-700">
-                                            Join us for a wonderful time of food and fellowship before evening
-                                            activities begin. Menu changes weekly!
-                                        </div>
-                                    </span>
-                                </span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">6:30</span>
-                                <span class="text-slate-700">
-                                    <!-- RA Pop-up -->
-                                    <span
-                                        class="relative group inline-block text-teal-600 underline decoration-dotted cursor-pointer font-medium">
-                                        RAs
-                                        <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-slate-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-slate-700">
-                                            Royal Ambassadors: A missions discipleship group for boys in grades 1-6
-                                            learning to serve Christ. <a href="nextgen.html"
-                                                class="text-teal-400 underline">Learn more</a>.
-                                        </div>
-                                    </span>
-                                    /
-                                    <!-- GA Pop-up -->
-                                    <span
-                                        class="relative group inline-block text-teal-600 underline decoration-dotted cursor-pointer font-medium">
-                                        GAs
-                                        <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-slate-800 text-white text-xs rounded p-3 shadow-xl z-50 normal-case border border-slate-700">
-                                            Girls in Action: A dynamic missions discipleship ministry for girls in
-                                            grades 1-6. <a href="nextgen.html" class="text-teal-400 underline">Learn
-                                                more</a>
-                                        </div>
-                                    </span>
-                                    in main building
-                                </span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">6:30</span>
-                                <span class="text-slate-700">
-                                    <!-- Youth Link with Pop-up -->
-                                    <a href="nextgen.html"
-                                        class="relative group inline-block text-teal-600 underline decoration-dotted hover:text-teal-500 transition-colors cursor-pointer font-medium">
-                                        Youth
-
-                                        <!-- Tooltip Wrapper -->
-                                        <div
-                                            class="absolute bottom-full left-1/2 transform -translate-x-1/2 pb-2 hidden group-hover:block w-48 z-[9999] cursor-default">
-
-                                            <!-- Tooltip Content -->
-                                            <div
-                                                class="bg-slate-800 text-white text-xs rounded p-3 shadow-xl normal-case border border-slate-700">
-                                                Our youth ministry provides a welcoming space for teenagers to explore
-                                                their faith, ask tough questions, and build lasting friendships.
-                                            </div>
-
-                                        </div>
-                                    </a> in the Loft
-                                </span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">6:30</span>
-                                <span class="text-slate-700">Pastor Adam's Bible Study, Large fellowship hall</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">7:30</span>
-                                <span class="text-slate-700">Choir practice in the Sanctuary</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <span class="font-semibold text-slate-500 w-12 shrink-0">8:30</span>
-                                <span class="text-slate-700">Praise team practice in the Sanctuary</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Special Events -->
-                    <div>
-                        <h3
-                            class="font-bold text-teal-700 text-lg border-b border-slate-200 pb-1 mb-3 uppercase tracking-wider text-sm">
-                            Special Events</h3>
-                        <ul class="space-y-4">
-                            <li>
-                                <div class="font-medium text-slate-700">Community Outreach</div>
-                                <div class="text-sm text-slate-500 mt-0.5">Saturday, Aug 8th at 10:00 AM</div>
-                            </li>
-                            <li>
-                                <div class="font-medium text-slate-700">Quarterly Business Meeting</div>
-                                <div class="text-sm text-slate-500 mt-0.5">Sunday, Aug 23rd at 6:00 PM</div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-        </div>
-
-        <!-- 3. About Section (Two-Column Layout) -->
+      <!-- Top Two Columns: New Here & Schedule -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-stretch">
+        <!-- 1. New Here Section -->
         <section
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 hover:shadow-lg transition duration-300">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
-                <!-- Left Column: Graphic -->
-                <div class="flex justify-center md:justify-end">
-                    <img src="art.png" alt="Our Mission" class="w-full max-w-sm h-auto object-contain">
-                </div>
-
-                <!-- Right Column: Text -->
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center md:text-left">About Our Community</h2>
-                    <div class="text-slate-600 space-y-5 text-center md:text-left text-lg leading-relaxed">
-                        <p>
-                            We are a vibrant and welcoming community dedicated to loving God and serving our neighbors.
-                            Our
-                            mission is to provide a safe and nurturing environment where individuals and families can
-                            grow
-                            spiritually while building lasting relationships.
-                        </p>
-                        <p>
-                            Founded on the principles of grace and truth, we believe in the power of community to
-                            transform
-                            lives. Join us as we journey together in faith, hope, and love. Everyone has a story, and we
-                            would
-                            love to be a part of yours.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col justify-between h-full"
+        >
+          <div>
+            <h2
+              class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3"
+            >
+              <svg
+                class="w-7 h-7 text-teal-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              New Here?
+            </h2>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Welcome! We are so glad you found us. Whether you are exploring
+              faith for the first time or looking for a new church home, there
+              is a place for you here. Come exactly as you are.
+            </p>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              We have dedicated, secure environments for infants through 5th
+              grade during all Sunday services. Our background-checked
+              volunteers are ready to help you at the Kids Check-In desk as soon
+              as you arrive.
+            </p>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              We are easily accessible from Raleigh, Wendell, Clayton, or
+              Zebulon. When you pull into the lot, look for the reserved
+              First-Time Guest parking right near the main entrance.
+            </p>
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Let our welcome team know that you are a first-time guest. We have
+              a free gift for you and a team ready to answer any questions, show
+              you around, or just say hello!
+            </p>
+          </div>
+          <button
+            class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 w-full md:w-auto self-start mt-auto"
+          >
+            Plan Your Visit
+          </button>
         </section>
 
+        <!-- 2. Schedule/Upcoming Events Section (Lighter Color Scheme) -->
+        <section
+          class="bg-white rounded-2xl shadow-sm border border-slate-100 text-slate-800 p-8 hover:shadow-lg transition duration-300 h-full flex flex-col"
+        >
+          <h2
+            class="text-2xl font-bold mb-8 flex items-center gap-3 shrink-0 text-slate-900"
+          >
+            <svg
+              class="w-7 h-7 text-teal-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Upcoming Events
+          </h2>
+
+          <!-- Scrollable Events Container -->
+          <div
+            class="space-y-8 overflow-y-auto custom-scrollbar pr-2 flex-grow"
+          >
+            <!-- Sundays -->
+            <div>
+              <h3
+                class="font-bold text-teal-700 text-lg border-b-2 border-teal-100 pb-2 mb-4 uppercase tracking-wider text-sm flex items-center gap-2"
+              >
+                Sundays
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >9:15</span
+                  >
+                  <div>
+                    <span class="block font-medium text-slate-800"
+                      >Life Groups, Youth & Children</span
+                    >
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Various Rooms
+                    </span>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >10:30</span
+                  >
+                  <div>
+                    <span class="block font-medium text-slate-800"
+                      >Worship Service</span
+                    >
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Sanctuary
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Wednesdays -->
+            <div>
+              <h3
+                class="font-bold text-teal-700 text-lg border-b-2 border-teal-100 pb-2 mb-4 uppercase tracking-wider text-sm flex items-center gap-2"
+              >
+                Wednesdays
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >5:30</span
+                  >
+                  <div>
+                    <a
+                      href="meal.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    >
+                      Family Meal
+                    </a>
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Large Fellowship Hall
+                    </span>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >6:30</span
+                  >
+                  <div>
+                    <a
+                      href="nextgen.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    >
+                      RAs (Royal Ambassadors)
+                    </a>
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Small Fellowship Hall
+                    </span>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >6:30</span
+                  >
+                  <div>
+                    <a
+                      href="nextgen.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    >
+                      GAs (Girls in Action)
+                    </a>
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Room 234
+                    </span>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >6:30</span
+                  >
+                  <div>
+                    <a
+                      href="nextgen.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    >
+                      Youth Group
+                    </a>
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      The Loft
+                    </span>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >6:30</span
+                  >
+                  <div>
+                    <a
+                      href="biblestudy.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    >
+                      Pastor Adam's Bible Study
+                    </a>
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Large Fellowship Hall
+                    </span>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >7:30</span
+                  >
+                  <div>
+                    <a
+                      href="music.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                      >Choir Practice</a
+                    >
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Sanctuary
+                    </span>
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <span
+                    class="font-bold text-slate-400 w-12 shrink-0 text-right mt-0.5"
+                    >8:30</span
+                  >
+                  <div>
+                    <a
+                      href="music.html"
+                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    >
+                      Praise Team Practice
+                    </a>
+                    <span
+                      class="flex items-center gap-1 text-sm text-slate-500 mt-1"
+                    >
+                      <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                      Sanctuary
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Special Events -->
+            <div>
+              <h3
+                class="font-bold text-teal-700 text-lg border-b-2 border-teal-100 pb-2 mb-4 uppercase tracking-wider text-sm flex items-center gap-2"
+              >
+                Special Events
+              </h3>
+              <ul class="space-y-4">
+                <li class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                  <div class="font-bold text-slate-800 mb-1">
+                    Community Outreach
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-slate-500">
+                    <svg
+                      class="w-4 h-4 text-teal-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                    Saturday, Aug 8th at 10:00 AM
+                  </div>
+                </li>
+                <li class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+                  <div class="font-bold text-slate-800 mb-1">
+                    Quarterly Business Meeting
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-slate-500">
+                    <svg
+                      class="w-4 h-4 text-teal-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                    Sunday, Aug 23rd at 6:00 PM
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 3. About Section (Two-Column Layout) -->
+      <section
+        class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-12 hover:shadow-lg transition duration-300"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <!-- Left Column: Graphic -->
+          <div class="flex justify-center md:justify-end">
+            <img
+              src="art.png"
+              alt="Our Mission"
+              class="w-full max-w-sm h-auto object-contain"
+            />
+          </div>
+
+          <!-- Right Column: Text -->
+          <div>
+            <h2
+              class="text-3xl font-bold text-slate-900 mb-6 text-center md:text-left"
+            >
+              About Our Community
+            </h2>
+            <div
+              class="text-slate-600 space-y-5 text-center md:text-left text-lg leading-relaxed"
+            >
+              <p>
+                We are a vibrant and welcoming community dedicated to loving God
+                and serving our neighbors. Our mission is to provide a safe and
+                nurturing environment where individuals and families can grow
+                spiritually while building lasting relationships.
+              </p>
+              <p>
+                Founded on the principles of grace and truth, we believe in the
+                power of community to transform lives. Join us as we journey
+                together in faith, hope, and love. Everyone has a story, and we
+                would love to be a part of yours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p>&copy; 2026 Grace & Truth Fellowship. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
-            </div>
+    <footer
+      class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm"
+      >
+        <p>&copy; 2026 Grace & Truth Fellowship. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition duration-200"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition duration-200"
+            >Terms of Service</a
+          >
         </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
