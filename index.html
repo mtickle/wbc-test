@@ -13,14 +13,12 @@
       }
 
       .custom-scrollbar::-webkit-scrollbar-track {
-        background: rgba(241, 245, 249, 1);
-        /* slate-100 */
+        background: rgba(241, 245, 249, 1); /* slate-100 */
         border-radius: 4px;
       }
 
       .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(13, 148, 136, 0.3);
-        /* teal-600 with opacity */
+        background: rgba(13, 148, 136, 0.3); /* teal-600 with opacity */
         border-radius: 4px;
       }
 
@@ -82,15 +80,68 @@
 
     <!-- Main Content -->
     <main class="flex-grow max-w-6xl mx-auto px-6 py-12 w-full">
-      <!-- Top Two Columns: New Here & Schedule -->
+      <!-- Top Two Columns: Left Side (New Here & News) & Right Side (Schedule) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-stretch">
-        <!-- 1. New Here Section -->
-        <section
-          class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col justify-between h-full"
-        >
-          <div>
+        <!-- LEFT COLUMN: Stacking New Here and News -->
+        <div class="flex flex-col gap-8 h-full">
+          <!-- 1. New Here Section -->
+          <section
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <h2
+                class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3"
+              >
+                <svg
+                  class="w-7 h-7 text-teal-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                New Here?
+              </h2>
+              <p class="text-slate-600 mb-6 leading-relaxed">
+                Welcome! We are so glad you found us. Whether you are exploring
+                faith for the first time or looking for a new church home, there
+                is a place for you here. Come exactly as you are.
+              </p>
+              <p class="text-slate-600 mb-6 leading-relaxed">
+                We have dedicated, secure environments for infants through 5th
+                grade during all Sunday services. Our background-checked
+                volunteers are ready to help you at the Kids Check-In desk as
+                soon as you arrive.
+              </p>
+              <p class="text-slate-600 mb-6 leading-relaxed">
+                We are easily accessible from Raleigh, Wendell, Clayton, or
+                Zebulon. When you pull into the lot, look for the reserved
+                First-Time Guest parking right near the main entrance.
+              </p>
+              <p class="text-slate-600 mb-6 leading-relaxed">
+                Let our welcome team know that you are a first-time guest. We
+                have a free gift for you and a team ready to answer any
+                questions, show you around, or just say hello!
+              </p>
+            </div>
+            <button
+              class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 w-full md:w-auto self-start mt-auto"
+            >
+              Plan Your Visit
+            </button>
+          </section>
+
+          <!-- 2. Latest News Section -->
+          <section
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 hover:shadow-lg transition duration-300 flex flex-col flex-grow"
+          >
             <h2
-              class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3"
+              class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3"
             >
               <svg
                 class="w-7 h-7 text-teal-600"
@@ -102,41 +153,90 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
                 ></path>
               </svg>
-              New Here?
+              Church News
             </h2>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              Welcome! We are so glad you found us. Whether you are exploring
-              faith for the first time or looking for a new church home, there
-              is a place for you here. Come exactly as you are.
-            </p>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              We have dedicated, secure environments for infants through 5th
-              grade during all Sunday services. Our background-checked
-              volunteers are ready to help you at the Kids Check-In desk as soon
-              as you arrive.
-            </p>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              We are easily accessible from Raleigh, Wendell, Clayton, or
-              Zebulon. When you pull into the lot, look for the reserved
-              First-Time Guest parking right near the main entrance.
-            </p>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              Let our welcome team know that you are a first-time guest. We have
-              a free gift for you and a team ready to answer any questions, show
-              you around, or just say hello!
-            </p>
-          </div>
-          <button
-            class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 w-full md:w-auto self-start mt-auto"
-          >
-            Plan Your Visit
-          </button>
-        </section>
 
-        <!-- 2. Schedule/Upcoming Events Section (Lighter Color Scheme) -->
+            <div class="space-y-6 flex-grow">
+              <!-- News Item 1 -->
+              <article class="group">
+                <time
+                  class="text-xs font-bold text-teal-600 uppercase tracking-wider block mb-1"
+                  >August 15, 2026</time
+                >
+                <h3
+                  class="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2 cursor-pointer"
+                >
+                  Fall Festival Volunteers Needed
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Our annual Fall Festival is just around the corner! We need
+                  volunteers to help run game booths, serve food, and manage the
+                  welcome tents. Sign up in the lobby this Sunday.
+                </p>
+              </article>
+
+              <!-- News Item 2 -->
+              <article class="group">
+                <time
+                  class="text-xs font-bold text-teal-600 uppercase tracking-wider block mb-1"
+                  >August 10, 2026</time
+                >
+                <h3
+                  class="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2 cursor-pointer"
+                >
+                  New Life Groups Starting
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Looking to get connected? A new cycle of Life Groups kicks off
+                  next month. Browse our available groups online and find the
+                  perfect fit for your schedule and stage of life.
+                </p>
+              </article>
+
+              <!-- News Item 3 -->
+              <article class="group">
+                <time
+                  class="text-xs font-bold text-teal-600 uppercase tracking-wider block mb-1"
+                  >August 2, 2026</time
+                >
+                <h3
+                  class="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2 cursor-pointer"
+                >
+                  Building Fund Update
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                  Thank you for your incredible generosity! We have reached 80%
+                  of our goal for the new roof installation. Progress updates
+                  will be shared at the upcoming Business Meeting.
+                </p>
+              </article>
+            </div>
+
+            <button
+              class="mt-6 text-teal-600 font-medium text-sm hover:text-teal-700 transition flex items-center gap-1 w-max"
+            >
+              Read All News
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN: Schedule/Upcoming Events Section -->
         <section
           class="bg-white rounded-2xl shadow-sm border border-slate-100 text-slate-800 p-8 hover:shadow-lg transition duration-300 h-full flex flex-col"
         >
@@ -177,10 +277,8 @@
                     >9:15</span
                   >
                   <div>
-                    <a
-                      href="lifegroups.html"
-                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
-                      >Life Groups, Youth & Children</a
+                    <span class="block font-medium text-slate-800"
+                      >Life Groups, Youth & Children</span
                     >
                     <span
                       class="flex items-center gap-1 text-sm text-slate-500 mt-1"
@@ -214,11 +312,8 @@
                     >10:30</span
                   >
                   <div>
-                    <a
-                      href="worship.html"
-                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
-                    >
-                      Worship Service</a
+                    <span class="block font-medium text-slate-800"
+                      >Worship Service</span
                     >
                     <span
                       class="flex items-center gap-1 text-sm text-slate-500 mt-1"
@@ -458,10 +553,8 @@
                     >7:30</span
                   >
                   <div>
-                    <a
-                      href="music.html"
-                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
-                      >Choir Practice</a
+                    <span class="block font-medium text-slate-800"
+                      >Choir Practice</span
                     >
                     <span
                       class="flex items-center gap-1 text-sm text-slate-500 mt-1"
@@ -496,12 +589,9 @@
                     >8:30</span
                   >
                   <div>
-                    <a
-                      href="music.html"
-                      class="block font-medium text-teal-600 hover:text-teal-800 underline decoration-teal-300 transition-colors"
+                    <span class="block font-medium text-slate-800"
+                      >Praise Team Practice</span
                     >
-                      Praise Team Practice
-                    </a>
                     <span
                       class="flex items-center gap-1 text-sm text-slate-500 mt-1"
                     >
