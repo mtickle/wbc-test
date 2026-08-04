@@ -30,7 +30,7 @@
 
   <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
     <!-- Header -->
-    <header class="bg-slate-900 text-white shadow-md">
+    <header class="bg-slate-900 text-white shadow-md relative">
       <div
         class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center"
       >
@@ -64,10 +64,14 @@
             >Contact</a
           >
         </nav>
-        <!-- Mobile Menu Placeholder -->
-        <div class="md:hidden">
+
+        <!-- Mobile Menu Button (Working Pancake) -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none hover:text-teal-400 transition-colors"
+        >
           <svg
-            class="w-6 h-6 text-white"
+            class="w-7 h-7 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -79,7 +83,41 @@
               d="M4 6h16M4 12h16M4 18h16"
             ></path>
           </svg>
-        </div>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-slate-800 border-t border-slate-700 absolute w-full z-50 shadow-xl"
+      >
+        <nav class="flex flex-col px-6 py-5 space-y-4 font-medium text-lg">
+          <a
+            href="index.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Home</a
+          >
+          <a
+            href="sermons.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Sermons</a
+          >
+          <a
+            href="lifegroups.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Life Groups</a
+          >
+          <a
+            href="ministries.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Ministries</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-teal-400 transition duration-200"
+            >Contact</a
+          >
+        </nav>
       </div>
     </header>
     <!-- Page Hero Section -->
@@ -763,5 +801,14 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
